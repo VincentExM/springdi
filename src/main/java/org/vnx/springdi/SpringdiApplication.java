@@ -12,9 +12,13 @@ public class SpringdiApplication {
 
 		ApplicationContext context = SpringApplication.run(SpringdiApplication.class, args);
 
-		MyController controller = (MyController) context.getBean("myController");
+		NonInjectedController controller = (NonInjectedController) context.getBean("nonInjectedController");
 
-		controller.hello();
+		controller.greet();
+
+		context.getBean(ConstructorInjectedController.class).greet();
+		context.getBean(SetterInjectedController.class).greet();
+		context.getBean(PropertyInjectedController.class).greet();
 	}
 
 }
