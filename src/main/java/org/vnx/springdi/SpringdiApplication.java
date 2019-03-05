@@ -1,7 +1,7 @@
 package org.vnx.springdi;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.*;
 import org.vnx.springdi.controllers.*;
 
@@ -19,6 +19,8 @@ public class SpringdiApplication {
 		context.getBean(ConstructorInjectedController.class).greet();
 		context.getBean(SetterInjectedController.class).greet();
 		context.getBean(PropertyInjectedController.class).greet();
+		context.getBean(PrimaryGreetingController.class)
+			   .greet();
 	}
 
 }

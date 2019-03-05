@@ -1,0 +1,22 @@
+package org.vnx.springdi.services;
+
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.*;
+import org.vnx.springdi.constants.*;
+
+@Service(PrimaryGreetingService.SERVICE_NAME)
+@Primary
+@Profile({ ProfileConstants.ENGLISH, ProfileConstants.DEFAULT })
+public class PrimaryGreetingService implements GreetingService {
+
+	public static final String SERVICE_NAME = "PrimaryGreetingService";
+
+	@Override
+	public String greetCasual() {
+
+		System.out.println(GreetingConstants.CASUAL_GREETING_EN + PrimaryGreetingService.class.getSimpleName());
+
+		return GreetingConstants.CASUAL_GREETING_EN;
+	}
+
+}

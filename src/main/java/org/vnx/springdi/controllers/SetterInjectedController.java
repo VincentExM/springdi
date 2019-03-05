@@ -8,6 +8,7 @@ import org.vnx.springdi.services.*;
 public class SetterInjectedController  implements GreetingController{
 
 	@Autowired
+	@Qualifier("setterGreetingService")
 	public void setSetterGreetingService(GreetingService setterGreetingService) {
 
 		this.setterGreetingService = setterGreetingService;

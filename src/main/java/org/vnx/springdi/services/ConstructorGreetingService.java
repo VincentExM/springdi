@@ -11,8 +11,8 @@ public class ConstructorGreetingService implements GreetingService {
 	@Override
 	public String greetCasual() {
 
-		System.out.println(GreetingConstants.CASUAL_GREETING + ConstructorGreetingService.class.getSimpleName());
+		System.out.println(GreetingConstants.CASUAL_GREETING_EN + ConstructorGreetingService.class.getSimpleName());
 
-		return GreetingConstants.CASUAL_GREETING;
+		return GreetingConstants.CASUAL_GREETING_EN;
 	}
 }

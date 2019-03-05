@@ -11,7 +11,7 @@ public class PropertyInjectedControllerTest {
 	private GreetingController propertyInjectedController;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 
 		PropertyInjectedController propertyInjectedController = new PropertyInjectedController();
 		propertyInjectedController.greetingService = new ConstructorGreetingService();
@@ -22,7 +22,7 @@ public class PropertyInjectedControllerTest {
 	@Test
 	public void test_greet_should_return_greet() {
 
-		assertEquals(GreetingConstants.CASUAL_GREETING, propertyInjectedController.greet());
+		assertEquals(GreetingConstants.CASUAL_GREETING_EN, propertyInjectedController.greet());
 
 	}
 

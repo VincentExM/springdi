@@ -11,7 +11,7 @@ public class ConstructorInjectedControllerTest {
 	private GreetingController constructorInjectedController;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 
 		ConstructorInjectedController constructorInjectedController = new ConstructorInjectedController(new ConstructorGreetingService());
 
@@ -21,7 +21,7 @@ public class ConstructorInjectedControllerTest {
 	@Test
 	public void test_greet_should_return_greet() {
 
-		assertEquals(GreetingConstants.CASUAL_GREETING, constructorInjectedController.greet());
+		assertEquals(GreetingConstants.CASUAL_GREETING_EN, constructorInjectedController.greet());
 
 	}
 

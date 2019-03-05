@@ -10,8 +10,8 @@ public class PropertyGreetingService implements GreetingService {
 	@Override
 	public String greetCasual() {
 
-		System.out.println(GreetingConstants.CASUAL_GREETING + PropertyGreetingService.class.getSimpleName());
+		System.out.println(GreetingConstants.CASUAL_GREETING_EN + PropertyGreetingService.class.getSimpleName());
 
-		return GreetingConstants.CASUAL_GREETING;
+		return GreetingConstants.CASUAL_GREETING_EN;
 	}
 }

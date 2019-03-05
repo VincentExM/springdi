@@ -11,8 +11,8 @@ public class NonInjectedGreetingService implements GreetingService {
 	@Override
 	public String greetCasual() {
 
-		System.out.println(GreetingConstants.CASUAL_GREETING + NonInjectedGreetingService.class.getSimpleName());
+		System.out.println(GreetingConstants.CASUAL_GREETING_EN + NonInjectedGreetingService.class.getSimpleName());
 
-		return GreetingConstants.CASUAL_GREETING;
+		return GreetingConstants.CASUAL_GREETING_EN;
 	}
 }

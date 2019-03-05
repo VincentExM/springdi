@@ -9,8 +9,8 @@ public class SetterGreetingService implements GreetingService {
 	@Override
 	public String greetCasual() {
 
-		System.out.println(GreetingConstants.CASUAL_GREETING + SetterGreetingService.class.getSimpleName());
+		System.out.println(GreetingConstants.CASUAL_GREETING_EN + SetterGreetingService.class.getSimpleName());
 
-		return GreetingConstants.CASUAL_GREETING;
+		return GreetingConstants.CASUAL_GREETING_EN;
 	}
 }
