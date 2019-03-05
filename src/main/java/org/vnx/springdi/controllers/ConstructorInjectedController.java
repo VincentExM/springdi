@@ -10,7 +10,7 @@ public class ConstructorInjectedController implements GreetingController{
 	private GreetingService greetingService;
 
 	@Autowired
-	public ConstructorInjectedController(GreetingService greetingService) {
+	public ConstructorInjectedController(@Qualifier(ConstructorGreetingService.SERVICE_NAME) GreetingService greetingService) {
 
 		this.greetingService = greetingService;
 	}

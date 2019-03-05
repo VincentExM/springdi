@@ -1,6 +1,7 @@
 package org.vnx.springdi.controllers;
 
 import org.junit.*;
+import org.vnx.springdi.constants.*;
 import org.vnx.springdi.services.*;
 
 import static org.junit.Assert.*;
@@ -13,7 +14,7 @@ public class PropertyInjectedControllerTest {
 	public void setUp() throws Exception {
 
 		PropertyInjectedController propertyInjectedController = new PropertyInjectedController();
-		propertyInjectedController.greetingService = new GreetingServiceImpl();
+		propertyInjectedController.greetingService = new ConstructorGreetingService();
 
 		this.propertyInjectedController = propertyInjectedController;
 	}
@@ -21,7 +22,7 @@ public class PropertyInjectedControllerTest {
 	@Test
 	public void test_greet_should_return_greet() {
 
-		assertEquals(GreetingServiceImpl.CASUAL_GREETING, propertyInjectedController.greet());
+		assertEquals(GreetingConstants.CASUAL_GREETING, propertyInjectedController.greet());
 
 	}
 

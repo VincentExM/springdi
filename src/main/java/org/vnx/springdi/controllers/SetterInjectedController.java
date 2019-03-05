@@ -8,16 +8,16 @@ import org.vnx.springdi.services.*;
 public class SetterInjectedController  implements GreetingController{
 
 	@Autowired
-	public void setGreetingService(GreetingService greetingService) {
+	public void setSetterGreetingService(GreetingService setterGreetingService) {
 
-		this.greetingService = greetingService;
+		this.setterGreetingService = setterGreetingService;
 	}
 
-	private GreetingService greetingService;
+	private GreetingService setterGreetingService;
 
 	@Override
 	public String greet() {
 
-		return greetingService.greetCasual();
+		return setterGreetingService.greetCasual();
 	}
 }

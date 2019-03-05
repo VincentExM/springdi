@@ -8,6 +8,7 @@ import org.vnx.springdi.services.*;
 public class PropertyInjectedController implements GreetingController{
 
 	@Autowired
+	@Qualifier("propertyGreetingService")
 	public GreetingService greetingService;
 
 	@Override

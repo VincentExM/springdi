@@ -8,7 +8,7 @@ public class NonInjectedController implements GreetingController{
 
 	public String greet() {
 
-		GreetingService greetingService = new GreetingServiceImpl();
+		GreetingService greetingService = new NonInjectedGreetingService();
 
 		return greetingService.greetCasual();
 	}
